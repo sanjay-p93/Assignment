@@ -21,10 +21,10 @@ public class DessertShop {
 			System.out.println("\n\nPlease select your role \n1. Owner \n2. Customer\n0. Exit\n");
 			Scanner sin= new Scanner(System.in);
 			i = sin.nextInt();	
-			candy1.getDetails();
-			cookie1.getDetails();
-			iceCream1.getDetails();
 			if(i==1){
+				candy1.getDetails();
+				cookie1.getDetails();
+				iceCream1.getDetails();
 				System.out.println("\nPlease select item to add");
 				itemNo = sin.nextInt();
 				System.out.print("\nPlease enter quantity : ");
@@ -45,6 +45,9 @@ public class DessertShop {
 
 			}
 			else if(i==2){
+				candy1.getDetails();
+				cookie1.getDetails();
+				iceCream1.getDetails();
 				System.out.println("\nPlease select an item to order");
 				itemNo = sin.nextInt();
 				System.out.print("\nPlease enter quantity : ");

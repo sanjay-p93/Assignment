@@ -1,5 +1,5 @@
 
-public  class IceCream extends Dessert{
+public  class IceCream extends Dessert implements Owner, Customer{
 	IceCream(float p,int t,int s){
 		this.setPrice(p);
 		this.setTax(t);

@@ -24,6 +24,4 @@ public  abstract class Dessert{
 	}
 
 	public abstract float getCost(int n);
-	public abstract void addItem(int n);
-	public abstract void buyItem(int n);
 }

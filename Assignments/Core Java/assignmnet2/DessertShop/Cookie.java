@@ -1,5 +1,5 @@
 
-public  class Cookie extends Dessert{
+public  class Cookie extends Dessert implements Owner,Customer{
 	Cookie(float p,int t,int s){
 		this.setPrice(p);
 		this.setTax(t);

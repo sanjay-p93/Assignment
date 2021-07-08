@@ -1,5 +1,5 @@
 
-public class Candy extends Dessert{
+public class Candy extends Dessert implements Owner,Customer{
 
 	Candy(float p,int t,int s){
 		this.setPrice(p);
