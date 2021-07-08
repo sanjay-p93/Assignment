@@ -1,5 +1,5 @@
 
 public interface Owner{
 
-	public abstract void addItem(int n);
+	void addItem(int n);
 }
