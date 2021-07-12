@@ -34,7 +34,10 @@ public class SavingsAccount implements Comparable<SavingsAccount>{
 	}
 
 	public void withdraw(float amt) {
-		this.acc_Balance -= amt;
+		if(this.acc_Balance>amt)
+			this.acc_Balance -= amt;
+		else
+			System.out.println("Balance in sufficient");
 	}
 	
 	public void deposit(float amt) {
@@ -47,12 +50,8 @@ public class SavingsAccount implements Comparable<SavingsAccount>{
 	}
 	@Override
 	public int compareTo(SavingsAccount o) {
-		if(this.acc_ID > o.acc_ID)
-			return 1;
-		else if(this.acc_ID < o.acc_ID)
-			return -1;
-		else
-			return 0;
+		return this.acc_ID-o.acc_ID;
+		
 	}
 
 	public SavingsAccount(int acc_ID, String accountHolderName, float acc_Balance, boolean isSalaryAccount) {
