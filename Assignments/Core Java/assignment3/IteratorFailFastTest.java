@@ -67,11 +67,10 @@ public class IteratorFailFastTest {
 		}
 
 		while(iterator2.hasNext()){
-			map.put("color3","blue");
+			map.put("color4","green");
 			String color2 = iterator2.next();
 			System.out.println(color2+"\t"+map.get(color2));
 		}
-		
 		
 		
 	}
