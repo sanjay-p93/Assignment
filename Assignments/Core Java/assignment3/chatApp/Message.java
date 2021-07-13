@@ -12,24 +12,6 @@ public class Message {
 		this.user = user;
 		this.message = message;
 	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(createdTime);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Message other = (Message) obj;
-		return createdTime == other.createdTime;
-	}
-
 	@Override
 	public String toString() {
 		return  user + " : " + message;
