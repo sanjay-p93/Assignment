@@ -45,4 +45,24 @@ public class Movie_DetailList {
 		}
 		return genreList;
 	}
+	
+
+	public void movieListSort(String field) {
+		if(field.equals("Movie Name")) {
+			this.movieList.sort(new NameSort());
+			System.out.println(this.movieList);	
+		}
+		else if(field.equals("Genre")) {
+				this.movieList.sort(new GenreSort());
+				System.out.println(this.movieList);	
+		}
+		else if(field.equals("Lead Actor")) {
+			this.movieList.sort(new LeadActorSort());
+			System.out.println(this.movieList);	
+		}
+		else if(field.equals("Lead Actress")) {
+			this.movieList.sort(new LeadActressSort());
+			System.out.println(this.movieList);	
+		}
+	}
 }

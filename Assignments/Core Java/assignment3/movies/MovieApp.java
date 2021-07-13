@@ -12,8 +12,8 @@ public class MovieApp {
 		movList.add_movie(new Movie_Details("rambo","stalone","Yvette Monreal","action"));
 		movList.add_movie(new Movie_Details("rocky","stalone","Talia Shire","action"));
 		movList.add_movie(new Movie_Details("Jumanji","Robin Williams","Kirsten Dunst","action"));
-		movList.add_movie(new Movie_Details("CITY LIGHTS","Charles Chaplin"," Virginia Cherrill","comedy"));
-		movList.add_movie(new Movie_Details("bfgcvxcv","stasdfsdflone","dfgdfgdfnreal","comedy"));
+		movList.add_movie(new Movie_Details("CITY LIGHTS","Charles Chaplin","Virginia Cherrill","comedy"));
+		movList.add_movie(new Movie_Details("bfgcvxcv","stasdfsdflone","dfgdfgdfnreal","horror"));
 		
 		movList.list_allmovie();
 		System.out.println("\n");
@@ -32,6 +32,11 @@ public class MovieApp {
 		
 		movList.list_allmovie();
 		System.out.println("\n");
+		
+		movList.movieListSort("Movie Name");		
+		movList.movieListSort("Genre");
+		movList.movieListSort("Lead Actor");		
+		movList.movieListSort("Lead Actress");
 
 	}
 
