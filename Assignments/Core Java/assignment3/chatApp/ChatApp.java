@@ -39,7 +39,7 @@ public class ChatApp {
 						if(n==1) {
 							  	int m=0;
 							  	do {
-									System.out.println("\n\nPlease select your option \n 1. Send message \n 2. View messages\n 2. List users \n 4. Clear chat \n 0. Exit \n");
+									System.out.println("\n\nPlease select your option \n 1. Send message \n 2. View messages\n 3. List users \n 4. Clear chat \n 0. Exit \n");
 									m = sin.nextInt();
 									switch(m) {
 									  case 1:

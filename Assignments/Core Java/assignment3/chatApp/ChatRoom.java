@@ -9,7 +9,7 @@ import java.util.Map;
 public class ChatRoom {
 
 	private List<User> ulist= new ArrayList<>();
-	private Map<User,String > chatRoom = new LinkedHashMap<>();
+	private List<Message > chatRoom = new ArrayList<>();
 	
 
 	public void addUser(User u) {
@@ -32,13 +32,14 @@ public class ChatRoom {
 		
 	}
 	public void addMessage(User u,String msg) {
-		this.chatRoom.put(u,msg);	
+		this.chatRoom.add(new Message(u,msg));	
 	}
 	
 	public void getChat() {
-		for(Map.Entry<User,String> e : this.chatRoom.entrySet()){
-			System.out.println(e.getKey()+" : "+e.getValue());
-		}
+
+		for(Message element : chatRoom){
+			System.out.println(element);	
+		}	
 	}
 	
 	public void clearChat() {

@@ -14,7 +14,7 @@ public class User {
 	}
 	@Override
 	public int hashCode() {
-		return (int)(System.currentTimeMillis()/1000);
+		return Objects.hash(Username);
 	}
 	
 	@Override
@@ -26,7 +26,7 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		return Objects.equals(Username, other.Username) && Objects.equals(pass, other.pass);
+		return Objects.equals(Username, other.Username);
 	}
 	@Override
 	public String toString() {
