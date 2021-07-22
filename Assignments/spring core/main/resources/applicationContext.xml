@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util 
+           http://www.springframework.org/schema/util/spring-util.xsd">
+           
+	<context:component-scan base-package="testCore"/>
+
+	<bean id="xmlJdbcConnection" class="testXml.XmlJdbcConnection"/>
+	
+	<bean id="xmlPesronDAO" class="testXml.XmlPesronDAO">
+		<property name="xmlJdbcConnection" ref="xmlJdbcConnection" />
+	</bean>
+	   
+	<!-- CustomerApplication Q1 -->
+	
+	<bean id="address" class="springCoreQ1.Address">
+		<constructor-arg value="street2"></constructor-arg>  
+		<constructor-arg value="Cochin"></constructor-arg>  
+		<constructor-arg value="Kerala"></constructor-arg>  
+		<constructor-arg value="India"></constructor-arg>  
+		<constructor-arg value="683678" type="int"></constructor-arg> 
+	</bean>
+	
+	<bean id="customer" class="springCoreQ1.Customer">
+		<constructor-arg value="123" type="int"></constructor-arg> 
+		<constructor-arg value="John"></constructor-arg>  
+		<constructor-arg value="987654321" type="int"></constructor-arg> 
+		<constructor-arg ref = "address"/>
+		<!-- setter injection
+		<property name="customerAddress" ref="address" /> -->
+	</bean>
+
+
+	<!-- QuestionApplication Q2 -->
+	
+	<util:map id="answerMap" map-class="java.util.HashMap" value-type="java.lang.String" key-type="java.lang.Integer"> 
+	  <entry key="1" value="Mango"/>
+	  <entry key="2" value="Jackfruit"/>
+	  <entry key="3" value="Pappaya"/>
+	</util:map>
+	
+	<util:list id="answerList" value-type="java.lang.String">
+		<value>Apple</value>  
+		<value>Orange</value>  
+		<value>Banana</value>  
+	</util:list>
+	
+	<util:set id="answerSet" value-type="java.lang.String">
+		<value>Cherry</value>  
+		<value>Fig</value>  
+		<value>Pineapple</value>  
+	</util:set>
+	
+	<bean id="question" class="springCoreQ2.Question">  
+		<constructor-arg value="1" type="int"></constructor-arg>  
+		<constructor-arg value="Name some fruits?"></constructor-arg>  
+		<constructor-arg ref = "answerList"/>
+	</bean> 
+	
+
+	<!-- QuestionApplication Q7 -->
+	
+	
+	<bean id="spelObj" class="springCoreQ7.SpelObj">  
+		<property name="id" value="#{ T(java.lang.Math).random()*10}" />
+		<property name="name" value="#{ 'Rambo'}" />
+	</bean> 
+	
+	<!-- QuestionApplication Q8-9 -->
+	
+	
+   <bean id = "beanLife" class = "springCoreQ8n9.BeanLife" init-method = "init" 
+      destroy-method = "destroy">
+      <property name = "message" value = "Property set"/>
+   </bean>
+</beans> 
