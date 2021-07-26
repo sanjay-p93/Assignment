@@ -25,10 +25,9 @@ public class RegistrationController {
 			ModelMap model) {
 
 		if (result.hasErrors()) {
+
 			if (result.getFieldError("zipcode") == null && result.getGlobalError()!=null) {
-
 				model.addAttribute("errorZip",result.getGlobalError().getDefaultMessage());
-
 			}
 
 			return "registration";

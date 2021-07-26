@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Q3</title>
+<title>Q6-7</title>
 </head>
 <body>
 <h1 style="color:blue;">SUCCESS</h1>
