@@ -6,7 +6,7 @@ Q3 - UserLogin
 
 Q4 - UserRegistration
 
-Q5 -
+Q5 - EmployeeManagement
 
 Q6, Q7 - CoustomerValidation
 
@@ -16,4 +16,4 @@ Q9 - EmployeeList
 
 Q10, 11 - EmployeeFile
 
-Q12 -
+Q12 - BankExceptionHndl

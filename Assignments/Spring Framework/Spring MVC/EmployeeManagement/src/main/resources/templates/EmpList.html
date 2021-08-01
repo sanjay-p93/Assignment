@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Home page</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+		<div class="container">
+		   <h2 align="left" class="text-primary">Employee List</h2>
+		   <hr/>
+		   <div th:if="${not#lists.isEmpty(list)}">
+		      <table class="table" align="center">
+		         <tr>
+		            <th>EmployeeId</th>
+		            <th>Employee Name</th>
+		            <th>Department</th>
+		            <th>Designation</th>
+		            <th>Salary</th>
+		            <th>Update</th>
+		            <th>Delete</th>
+		         </tr>
+		         <tr th:each="employee : ${list}">
+		            <td th:text="${employee.employeeId}"></td>
+		            <td th:text="${employee.employeeName}"></td>
+		            <td th:text="${employee.employeeDepartment}"></td>
+		            <td th:text="${employee.employeeDesignation}"></td>
+		            <td th:text="${employee.employeeSalary}"></td>
+		            <td><a th:href="@{/edit/__${employee.employeeId}__}">edit</a></td>
+		            <td><a th:href="@{/delete/__${employee.employeeId}__}">delete</a></td>
+		         </tr>
+		      </table>
+		   </div>
+		</div>
+    </body>
+</html>

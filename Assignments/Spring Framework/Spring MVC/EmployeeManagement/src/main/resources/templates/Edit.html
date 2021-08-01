@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+  <head>
+    <title tiles:fragment="title">Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div tiles:fragment="content">
+        <form name="f" th:action="@{/save}" th:object="${employee}" method="post">               
+            <fieldset>
+                <legend>Add New Employee</legend>
+                 
+                <label for="employeeId">ID       : </label>
+                <input style="background-color: #F2F2F2;" type="number" name="employeeId" th:value="*{employeeId}" readonly /><br>
+                <label for="employeeName">Name     : </label>
+                <input type="text"  name="employeeName" th:value="*{employeeName}" /><br> <br>      
+                <label for="employeeDepartment">Department : </label>
+                <input type="text"  name="employeeDepartment" th:value="*{employeeDepartment}"/><br><br>
+                 <label for="employeeDesignation">Designation : </label>
+                <input type="text"  name="employeeDesignation"  th:value="*{employeeDesignation}" /><br>  <br>
+                <label for="employeeSalary">Salary    : </label>
+                <input type="number" name="employeeSalary"  th:value="*{employeeSalary}" /><br><br>
+                  
+                <div class="form-actions">
+                    <button type="submit" class="btn">Save</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+  </body>
+</html>
