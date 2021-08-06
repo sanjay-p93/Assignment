@@ -1,0 +1,34 @@
+/* Q2 */
+img{
+    max-width: 50px;
+    max-height: 50px;
+}
+.border-purple{
+    border: solid 2px;
+    border-color: purple;
+}
+
+/* Q3 */
+.table-border-grey> table, th, td {
+    border: 1px solid grey;
+}
+
+/* Q4 */
+.td-border-none> td {
+    border: none !important;
+}
+
+/* Q5 */
+
+ol.a {
+    list-style-type: lower-alpha;
+}
+ol.b {
+    list-style-type: upper-alpha;
+}
+ol.c {
+    list-style-type: upper-roman;
+}
+ol.d {
+    list-style-type: lower-roman;
+}
