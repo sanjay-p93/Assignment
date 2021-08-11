@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet2.css"/>
+        <title>Q2/title>
+    </head>
+    <body>
+        <div class="outer-container fill">
+        <div class="container">
+            <header class="header">
+              <h1 id="title" class="text-center title">Survey Form</h1>
+            </header>
+            <form id="survey-form">
+              <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="">
+              </div>
+              <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required="">
+              </div>
+              <div class="form-group">
+                <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+                <input type="number" name="age" id="number" min="10" max="99" step="1" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Sex </label>
+                <label><input name="gender" value="Male" type="radio" checked="">Male</label>
+                <label><input name="gender" value="Female" type="radio" >Female</label>          
+                <label><input name="gender" value="Other" type="radio">Other</label>
+              </div>
+          
+              <div class="form-group">
+                <label>City </label>
+                <select id="dropdown" name="city" class="form-control" required="">
+                  <option disabled="" selected="" value="">Select your city</option>
+                  <option value="mumbai">Mumbai</option>
+                  <option value="chennai">Chennai</option>
+                  <option value="cochin">Cochin</option>
+                </select>
+              </div>
+
+          
+              <div class="form-group">
+                <p>Shopping apps you prefer</p>
+          
+                <label><input name="prefer" value="Amazon" type="checkbox" class="input-checkbox">Amazon</label>
+                <label><input name="prefer" value="Flipkart" type="checkbox" class="input-checkbox">Flipkart</label>
+                <label><input name="prefer" value="ebay" type="checkbox" class="input-checkbox">ebay</label>
+                <label><input name="prefer" value="Myntra" type="checkbox" class="input-checkbox">Myntra</label>
+              </div>
+          
+              <div class="form-group">
+                <p>What makes you choose?</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+              </div>
+          
+              <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </body>
+</html>

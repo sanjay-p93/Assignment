@@ -34,8 +34,9 @@ var c =map(b,Math.sqrt);
 console.log(b);
 console.log(c);
 
-// //q3
+//q3
 // console.log((function(x){return x*x;})(5));
 // console.log("the string is "+map); 
-// var s =(function(fn){return " "+fn;})(s);
-// console.log(s);
+
+let z =function (fn){console.log( " "+fn);};
+z(z);

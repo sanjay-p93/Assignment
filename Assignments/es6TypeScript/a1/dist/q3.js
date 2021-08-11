@@ -13,6 +13,11 @@ var OrderDetails = /** @class */ (function () {
     return OrderDetails;
 }());
 var order = new OrderDetails(101, "coverse", 3000);
-console.log(order.printOrder());
+var order2 = Object.assign({}, order);
+console.log(order.id);
 console.log(order.getPrice());
+console.log(order.printOrder());
+console.log("copy object");
+console.log(order2.id);
+// console.log(order2.getPrice()); // Object.assign () does not copy mehtods and prototypes
 //# sourceMappingURL=q3.js.map

@@ -24,6 +24,13 @@ class OrderDetails {
     }
 }
 
+  
 const order: Order = new OrderDetails(101,"coverse",3000);
-console.log(order.printOrder());
+const order2: Order = Object.assign({},order);
+
+console.log(order.id);
 console.log(order.getPrice());
+console.log(order.printOrder());
+console.log("copy object");
+console.log(order2.id);
+// console.log(order2.getPrice()); // Object.assign () does not copy mehtods and prototypes

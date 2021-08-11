@@ -1,0 +1,14 @@
+.container{
+    background-color: #eee;
+    padding: 75px;
+    border-radius: 25px;
+    margin: 50px;
+}
+.text-center{
+    text-align: center;
+}
+img {
+    width: 240px;
+    height: 280px;
+    border-radius: 50%;
+}

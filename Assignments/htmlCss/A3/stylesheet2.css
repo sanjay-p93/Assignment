@@ -1,0 +1,36 @@
+.outer-container{
+    padding: 50px;
+    background-image: url('img/2.jpeg');
+    background-size: 100% 100%;
+}
+.container{
+    background-color: rgba(202, 172, 0, 0.993);
+    opacity: 70%;
+    padding: 75px;
+    border-radius: 25px;
+}
+.text-center{
+    text-align: center;
+}
+.title{
+    font-family: sans-serif;
+}
+.form-group{
+    margin: 20px;
+}
+.input-textarea{
+    min-width: 300px;
+    min-height: 100px;
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
